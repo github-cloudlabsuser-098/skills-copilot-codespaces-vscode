@@ -1,0 +1,69 @@
+# Create a GitHub action to email a report from a file at 6 a.m. daily.
+
+on:
+  schedule:
+    - cron: "0 6 * * *"
+
+jobs:
+  email_report:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Email daily report
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 587
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: Daily report
+          body: The report is attached.
+          to: ${{ secrets.RECIPIENT_EMAIL }}
+          attachments: deploy-report.txt
+```
+
+## Conclusion
+
+In this lab, you learned how to create a GitHub action to automate the deployment of an application to a server. You also learned how to create a GitHub action to email a report from a file at 6 a.m. daily.
+
+## Finish
+
+Congratulations on completing the lab! In this lab, you learned how to:
+
+- Create a GitHub action to automate the deployment of an application to a server.
+- Create a GitHub action to email a report from a file at 6 a.m. daily.
+
+You can now end your lab here. See you in the next lab!
+
+on:
+  schedule:
+    - cron: "0 6 * * *"
+
+jobs:
+  email_report:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Email daily report
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 587
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: Daily report
+          body: The report is attached.
+          to: ${{ secrets.RECIPIENT_EMAIL }}
+          attachments: deploy-report.txt
+```
+
+## Conclusion
+
+In this lab, you learned how to create a GitHub action to automate the deployment of an application to a server. You also learned how to create a GitHub action to email a report from a file at 6 a.m. daily.
+
+## Finish
+
+Congratulations on completing the lab! In this lab, you learned how to:
+
+- Create a GitHub action to automate the deployment of an application to a server.
+- Create a GitHub action to email a report from a file at 6 a.m. daily.
+
+You can now end your lab here. See you in the next lab!
